@@ -25,3 +25,18 @@ body{
     top: 45vh;
     left: 50vw;
 }
+.paddle{
+    height:120px;
+    width: 15px;
+    background-color: #74ebd5;
+    position: fixed;
+    border-radius: 10px;
+}
+.left{
+     top:40vh;
+     left:12vw
+}
+.right{
+    top:40vh;
+    right:12vw
+}

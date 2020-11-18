@@ -1,9 +1,36 @@
 //alert("Connected");
 let ball = document.querySelector(".ball");
 let board= document.querySelector(".board");
+let leftPaddle=document.querySelector(".left");
+let rightPaddle=document.querySelector(".right");
 let boardBound= board.getBoundingClientRect();
 let x=true;
 let y=true;
+document.addEventListener("keydown",function(e){
+    if(e.key=="w")
+    {
+        movePaddle(leftPaddle,-window.innerHeight*0.1);
+    }
+    else if(e.key=="s")
+    {
+        movePaddle(leftPaddle,window.innerHeight*0.1);
+    }
+    else if(e.key=="ArrowUp")
+    {
+        movePaddle(rightPaddle,-window.innerHeight*0.1);
+    }
+    else if(e.key=="ArrowDown")
+    {
+        movePaddle(rightPaddle,window.innerHeight*0.1);
+    }
+})
+
+function movePaddle(cPaddle,change)
+{
+    let cPaddleBounds=cPaddle.getBoundingClientRect();
+    if(cPaddleBounds.top+change>=boardBound.top&&cPaddleBounds.bottom+change<=boardBound.bottom)
+        cPaddle.style.top=cPaddleBounds.top+change+"px";
+}
 function moveBall()
 {
     let ballCord=ball.getBoundingClientRect();
