@@ -3,7 +3,7 @@
 
 # ScreenShots
 
-<img src="https://github.com/Adarsh9616/Pong/blob/master/Screenshots/s1.JPG" width="600" height="500">
+<img src="https://github.com/Adarsh9616/Pong/blob/master/Screenshots/s1.JPG">
 
 
-<img src="https://github.com/Adarsh9616/Pong/blob/master/Screenshots/s2.JPG" width="600" height="500">
+<img src="https://github.com/Adarsh9616/Pong/blob/master/Screenshots/s2.JPG" >
