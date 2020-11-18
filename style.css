@@ -21,4 +21,7 @@ body{
     width: 30px;
     border-radius: 50%;
     background-color: #74ebd5;
+    position: fixed;
+    top: 45vh;
+    left: 50vw;
 }
