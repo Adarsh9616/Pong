@@ -42,12 +42,18 @@ function moveBall()
     {
         y=!y;
     }
-    if(ballLeft<=boardBound.left||ballRight>=boardBound.right)
+    let leftPaddleBounds=leftPaddle.getBoundingClientRect();
+    let rightPaddleBounds=rightPaddle.getBoundingClientRect();
+    if(ballLeft<=leftPaddleBounds.right&&ballRight>=leftPaddleBounds.left&&ballTop+30>=leftPaddleBounds.top&&ballBottom-30<=leftPaddleBounds.bottom)
     {
         x=!x;
     }
-    ball.style.top=(y==true)?ballTop+1+"px":ballTop-1+"px";
-    ball.style.left=(x==true)?ballLeft+1+"px":ballLeft-1+"px";
+    if(ballLeft<=rightPaddleBounds.right&&ballRight>=rightPaddleBounds.left&&ballTop+30>=rightPaddleBounds.top&&ballBottom-30<=rightPaddleBounds.bottom)
+    {
+        x=!x;
+    }    
+    ball.style.top=(y==true)?ballTop+3+"px":ballTop-3+"px";
+    ball.style.left=(x==true)?ballLeft+3+"px":ballLeft-3+"px";
     requestAnimationFrame(moveBall);
 }
 requestAnimationFrame(moveBall);
